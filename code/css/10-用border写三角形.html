@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        border-top: 50px solid #99cc99;
+        border-right: 50px solid transparent;
+        border-bottom: 50px solid transparent;
+        border-left: 50px solid transparent;
+        /* div默认的宽度就是浏览器的宽度,所以这个要是设置width为0的话,就会形成一个正方形,需要哪个方向的三角形,就把其他三角形设置为透明色 */
+        width: 0;
+        height: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				list-style: none;
+			}
+			ul{
+				overflow: hidden; 
+				/* 如果不加这个的话，ul是没有高度的，这就是高度塌陷的问题，可以使用BFC进行解决 */
+			}
+			ul li{
+				width: 100px;
+				height: 40px;
+				float: left;
+				background-color: #0000FF;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>首页</li>
+			<li>首页</li>
+			<li>首页</li>
+			<li>首页</li>
+			<li>首页</li>
+		</ul>
+	</body>
+</html>

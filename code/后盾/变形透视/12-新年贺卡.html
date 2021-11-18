@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			main{
+				background-color: #dcdde1;
+				width: 100vw;
+				height: 100vh;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			main .card{
+				width: 200px;
+				height: 100px;
+				background-color: #ffaa7f;
+				color: #f5f6fa;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				text-transform: uppercase;
+				position: relative;
+			}
+			main .card::before{
+				content: '新年';
+				position: absolute;
+				height: 100%;
+				width: 50%;
+				background-color: #c23616;
+				left: 0;
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
+				transition: 1s;
+				padding-right: 10px;
+			}
+			main .card::after{
+				content: '快乐';
+				position: absolute;
+				height: 100%;
+				width: 50%;
+				background-color: #c23616;
+				right: 0;
+				top: 0;
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				transition: 1s;
+				padding-left: 10px;
+				box-sizing: border-box;
+				
+			}
+			.card:hover::before{
+				transform-origin: left;
+				transform: rotateY(180deg);
+			}
+			.card:hover::after{
+				transform-origin: right;
+				transform: rotateY(-180deg);
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<div class="card">Happy new year</div>
+		</main>
+	</body>
+</html>

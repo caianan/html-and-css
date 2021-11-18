@@ -1,0 +1,27 @@
+.nav{
+	height: 60px;
+	width: 900px;
+	display: flex;
+	align-items: center;
+	background-color: #F0F8FF;
+	margin: 0 auto;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.nav ul{
+	display: flex;
+	list-style: none;	
+}
+.nav ul li{
+	margin: 10px;
+}
+.nav a{
+	text-decoration: none;
+	color: #222222;
+}
+@media screen and (max-width:600px) {
+	.nav ul {
+		display: none;
+	}
+}

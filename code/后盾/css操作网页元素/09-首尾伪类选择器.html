@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			:root{
+				font-size: 62.5%;
+			}
+			/* article :first-child{
+				color: red;
+			} */
+			/* 会选中所有后代中的第一个元素,包括 <aside> 标签中的第一个元素*/
+			
+			/* article>:first-child{
+				color: red;
+			} */
+			/* 会选中所有后代中的第一个元素,不包括 <aside> 标签中的第一个元素*/
+			
+			/* article h2:first-child{
+				color: red;
+			} */
+			/* 会选中所有后代中的第一个元素如果是h2的元素,包括 <aside> 标签中第一个元素如果是h2的元素,如果第一个元素不是h2则不会被选中 */
+			
+			/* article  h2:first-of-type{
+				color: red;
+			} */
+			/* 会选中所有后代中的第一个h2的元素,包括 <aside> 标签中第一个h2的元素*/
+			
+			article h2:last-of-type{
+				color: red;
+			}
+			/* 会选中所有后代中的最后一个h2的元素,包括 <aside> 标签中最后一个h2的元素*/
+		</style>
+	</head>
+	<body>
+		<article>
+			<h1>Baidu.com</h1>
+			<h2 title="baidu-com" name>www.baidu.com outside one</h2>
+			<h2>www.baidu.com</h2>
+			<aside>
+				<h2 title="www.baidu-com">www.baidu.com two inside</h2>
+			</aside>
+			<h2>www.baidu.com outside two</h2>
+		</article>
+	</body>
+</html>

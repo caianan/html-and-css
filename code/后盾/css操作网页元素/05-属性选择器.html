@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/* 没有属性值 */
+			/* h2[title][name]{
+				background-color: #008000;
+			} */
+			/* 有属性值 */
+			/* h2[title="baidu"]{
+				background-color: #008000;
+			} */
+			/* 属性值以什么开头 */
+			/* h2[title^="baidu"]{
+				background-color: #008000;
+			} */
+			/* 属性值以什么结尾 */
+			/* h2[title$="com"]{
+				background-color: #008000;
+			} */
+			
+			/* 属性值包含这个关键词 */
+			/* h2[title*="baidu"]{
+				background-color: #008000;
+			} */
+			
+			/* 属性值包含这个关键词,且这个关键词是一个独立的单词,不然不会被选择上 */
+			/* eg:<h2 title="www. baidu .com">www.baidu.com</h2> 这样可以被选择上 */
+			/* h2[title~="baidu"]{
+				background-color: #008000;
+			} */
+			
+			/* 以baidu开始,并且后面跟着- */
+			/* eg: <h2 title="baidu-com" name>www.baidu.com</h2>*/
+			/* 这样不行:<h2 title="www.baidu-com">www.baidu.com</h2> */
+			h2[title|="baidu"]{
+				background-color: #008000;
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<article>
+				<h2 title="baidu-com" name>www.baidu.com</h2>
+				<h1 >Baidu.com</h1>
+				<h2>www.baidu.com</h2>
+				<aside>
+					<h2 title="www.baidu-com">www.baidu.com</h2>
+				</aside>
+				<h2>www.baidu.com</h2>
+			</article>
+		</main>
+	</body>
+</html>

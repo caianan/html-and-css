@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				width: 100vw;
+				height: 100vh;
+				background-color: #AAAAFF;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: nowrap;
+				justify-content: center;
+				align-items: center;
+			}
+			main{
+				width: 100%;
+				display: flex;
+				flex-wrap: nowrap;
+				justify-content: center;
+				align-items: center;
+			}
+			main div{
+				height: 250px;
+				width: 250px;
+				margin: 10px;
+				border: 2px solid #fff;
+				transition: 1s;
+			}
+			main div img{
+				width: 100%;
+			}
+			main:hover div{
+				transform: scale(.5);
+				filter: blur(10px);
+			}
+			main:hover div:hover{
+				transform: scale(1.5);
+				filter: blur(0);
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<div><img src="https://img0.baidu.com/it/u=3696163694,2080607312&fm=26&fmt=auto&gp=0.jpg" alt=""></div>
+			<div><img src="https://img2.baidu.com/it/u=228436383,3520321118&fm=26&fmt=auto&gp=0.jpg" alt=""></div>
+			<div><img src="https://img2.baidu.com/it/u=95369196,1200453554&fm=26&fmt=auto&gp=0.jpg" alt=""></div>
+		</main>
+	</body>
+</html>

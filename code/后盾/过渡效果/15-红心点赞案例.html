@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_2808807_ny4zdtd4lhc.css"/>
+		<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			body{
+				background-color: #55AA7F;
+				width: 100vw;
+				height: 100vh;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			main{
+				position: relative;
+				width: 50px;
+				height: 50px;
+				border: 1px solid #FFFFFF;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			main i.iconfont{
+				font-size: 2rem;
+				position: absolute;
+				color: #F5F6FA;
+				transition-duration: 2s;
+				/* transition-timing-function:step-start ; */
+				transition-timing-function: linear;
+			}
+			.heart i.iconfont{
+				transform: scale(2);
+				color: red;
+				opacity: 0;
+			}
+			.heart i.iconfont:nth-child(2){
+				opacity: 1;
+				transform: scale(1);
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<i class="iconfont icon-heart"></i>
+			<i class="iconfont icon-heart"></i>
+		</main>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$('main').click(function (e) { 
+					e.preventDefault();
+					$(this).toggleClass('heart');
+				});
+			});
+		</script>
+	</body>
+</html>

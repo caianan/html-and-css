@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        border: 1px red solid;
+        /* 
+            这种情况就会出现img的底部和border有3px的间距
+            第一种方法:可以利用inline-block特有的属性, vertical-align:top/middle/bottom 来解决这个问题;
+            第二种方法:把inlin-block的属性变成block
+            第三种方法:添加浮动 float:left
+            
+        */
+      }
+      img {
+        vertical-align: top;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <img
+        src="https://tse1-mm.cn.bing.net/th/id/R-C.1e511030a875576d4e6c684d85b022ac?rik=TIKUU0085CSwKQ&riu=http%3a%2f%2fscimg.jianbihuadq.com%2ftouxiang%2f202003%2f2020030915105554.jpg&ehk=CR6wUfpjH4z9iV9HEX1siiKBN21Q5A%2bGincO3jnNhSQ%3d&risl=&pid=ImgRaw&r=0"
+        alt=""
+      />
+    </div>
+  </body>
+</html>

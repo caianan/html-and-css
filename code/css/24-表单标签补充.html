@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="" method="post">
+			<p>
+				<label for="user">用户名：</label>
+				<input type="text" id="user" value=""  />
+			</p>
+			<p>
+				<label for="name">密码：</label>
+				<input type="password" id="name" />
+				<!-- 使用label进行空间绑定 -->
+			</p>
+			<p>
+				请选择你要上传的文件：
+				<input type="file" multiple>
+				<!-- type=file 上传文件，默认只上传一个文件，如果想上传多个文件，就添加multiple -->
+				<!-- multiple:表示可以上传多个文件 -->
+			</p>
+			<p>
+				<input type="radio" name="sex" id="" value="Man" checked="checked" /> 男
+				<input type="radio" name="sex" id="" value="Women" /> 女
+				<input type="radio" name="sex" id="" value="Translate" disabled="disabled" /> 跨性别
+				<!--
+					type=radio 单选按钮，如果想实现单选功能，就必须添加name属性，而且name的属性值必须一样 
+					disabled 禁用属性，表示禁用
+					checked 选中属性，表示选中
+				-->
+			</p>
+			<p>
+				<input type="checkbox" name="hobby" id="" value="sing" checked="checked"/>唱歌
+				<input type="checkbox" name="hobby" id="" value="draw" />画画
+				<input type="checkbox" name="hobby" id="" value="play" disabled="disabled" />玩儿
+				<input type="checkbox" name="hobby" id="" value="film" />电影
+				<!-- 
+					input:checkbox 多选框
+					disabled 禁用属性，表示禁用
+					checked 选中属性，表示选中
+					应用：勾选协议，购物车选择产品
+				 -->
+			</p>
+			<p>
+				<select name="city">
+					<option value="beijing">北京</option>
+					<option value="shanghai">上海</option>
+					<option value="shenzhen">深圳</option>
+				</select>
+			</p>
+			<p>
+				<textarea rows="" cols="" placeholder="请输入内容" style="resize: none;"></textarea>
+				<!-- resize: none; 禁止文本域进行缩放 -->
+			</p>
+			
+			<p>
+				<input type="reset" value="reset" />
+			</p>
+			<input type="submit" value="提交"/>
+		</form>
+		<fieldset id="">
+			<legend>标题</legend>
+			
+			
+		</fieldset>
+	</body>
+</html>

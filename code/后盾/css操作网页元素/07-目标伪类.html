@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport"
+			content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			:root {
+				scroll-snap-type: y proximity;
+				overflow-y: scroll;
+			}
+			:empty {
+				display: none;
+			}
+			div {
+				height: 900px;
+				border: 1px solid red;
+				margin-bottom: 10px;
+				scroll-snap-align: start;
+			}
+
+			div:target {
+				background-color: #008000;
+				font-size: 20px;
+			}
+
+			
+		</style>
+	</head>
+	<body>
+		<a href="#team">baidu</a>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li></li>
+		</ul>
+		<div></div>
+		<div id="team">
+			team
+		</div>
+	</body>
+</html>

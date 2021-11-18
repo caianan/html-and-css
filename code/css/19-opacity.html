@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 240px;
+        height: 240px;
+        margin: 100px auto;
+        position: relative;
+      }
+      .box img {
+        width: 240px;
+        height: 240px;
+      }
+      .box .shadow {
+        width: 240px;
+        height: 240px;
+        background-color: rgba(0, 0, 0, 0.4);
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: 1s;
+      }
+      .box:hover .shadow {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <img src="https://img0.baidu.com/it/u=1468107830,2351388133&fm=26&fmt=auto&gp=0.jpg" alt="" />
+      <div class="shadow"></div>
+    </div>
+  </body>
+</html>

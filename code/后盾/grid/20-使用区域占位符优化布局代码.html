@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 62.5%;
+      }
+      article {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-rows: 6rem 1fr 6rem;
+        grid-template-columns: 8rem 1fr;
+        grid-template-areas: '. .' '. .' 'footer footer';
+        /* 像上面默认给区域起名字后,会给区域默认加上边线名 header的横轴起始线和纵轴起始线分别为 header-start heeader-start header的横轴终点线和纵轴终点线分别为 header-end header-end */
+      }
+      div {
+        background-color: rgb(166, 200, 201);
+        padding: 0.5rem;
+        background-clip: content-box;
+      }
+      /* header {
+        grid-area: header-start / header-start / main-end / main-end;
+        grid-area: logo-start / logo-start / nav-end / nav-end;
+      } */
+      /*  nav {
+        grid-area: nav;
+      }
+      main {
+        grid-area: main;
+      } */
+      footer {
+        grid-area: footer;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+      footer div {
+        border: 0.5rem solid rgb(166, 200, 201);
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <div>Logo</div>
+      <div>header</div>
+      <div>nav</div>
+      <div>main</div>
+      <footer>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </footer>
+    </article>
+  </body>
+</html>

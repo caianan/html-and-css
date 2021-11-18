@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<style type="text/css">
+			.samller{
+				width: 100px;
+				height: 100px;
+				background-color: #0000FF;
+				float: left;
+			}
+			.bigger{
+				/* width: 200px; */
+				height: 100px;
+				background-color: #006633;
+				/* float: left; */  // smaller是BFC bigger是float:left,结果导致两个div不会重叠
+				/* 可以利用这个属性,构造左侧固定,右侧自适应的页面 */
+				overflow: hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="samller"></div>
+		<div class="bigger"></div>
+	</body>
+</html>

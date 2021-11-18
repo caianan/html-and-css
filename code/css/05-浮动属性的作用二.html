@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .one{
+            height: 200px;
+            width: 200px;
+            background: #FF3E96;
+            float: left; /* div本来是块级元素,如果所有div都浮动的话,那么就可以实现横向展示,但是这样有一个问题就是,如果下面的div也会横向显示,不会另起一行,解决的办法就是给所有需要浮动的元素一个父元素,父元素不浮动,让父元素提下面的子元素占位,这样就不会影响后面的元素了 */
+        }
+        .two{
+            height: 250px;
+            width: 250px;
+            background: #AB82FF;
+            float: left;
+        }
+        .three{
+            height: 300px;
+            width: 300px;
+            background: #87CEEB;
+            float: left;
+        }
+        .four{
+            height: 350px;
+            width: 350px;
+            background: #43CD80;
+            float: left;
+        }
+        .father{
+            height: 350px;
+            width: 100%;
+            background: #43CD80;
+        }
+    </style>
+</head>
+<body>
+    <!-- 让竖着的元素横向排列 -->
+    <div class="father">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="four"></div>
+    </div>
+    <div class="weibu">
+        weibudaohang
+    </div>
+</body>
+</html>

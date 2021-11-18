@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport"
+			content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="#" method="post">
+			<div class="mui-input-row">
+				<label for="user">Name</label>
+				<input type="text" placeholder="普通输入框" id="user">
+			</div>
+			<div class="mui-input-row">
+				<label for="password">Password</label>
+				<input type="password" id="password">
+			</div>
+			<!-- multiple 可以选多个文件 -->
+			<input type="file" name="" id="" value="" multiple="multiple" /> <br>
+			<div class="mui-input-row mui-radio ">
+				<label>Sex</label>
+				<!-- 如果想实现单选功能,必须添加name属性 -->
+				<input name="sex" type="radio"> Man
+				<!-- checked 表示选中 -->
+				<input name="sex" type="radio" checked> Women
+				<!-- disabled 禁止勾选 -->
+				<input name="sex" type="radio" disabled="disabled"> Translater
+			</div>
+			<div class="mui-input-row mui-checkbox ">
+				<label>City</label>
+				<!-- checked 表示选中 -->
+				<input name="city" type="checkbox" checked> BeiJing
+				<input name="city" type="checkbox" > ShangHai
+				<input name="city" type="checkbox" > ShenZhen
+				<!-- disabled 禁止勾选 -->
+				<input name="city" type="checkbox" disabled="disabled" > HangZhou
+			</div>
+			<div class="select">
+				<label>Country:</label>
+				<select name="country">
+					<option value="CN">CN</option>
+					<option value="USA">USA</option>
+					<option value="UK">UK</option>
+					<option value="JPA">JPA</option>
+				</select>
+			</div>
+			<div style="margin-top: 10px;">
+				<label>Message</label>
+				<!-- resize: none;禁止调节文本域的大小 -->
+				<textarea style="width: 300px; height: 300px; resize: none;"  ></textarea>
+			</div>
+			<input type="submit" value="Submit" />
+			<input type="reset" value="Reset" />
+		</form>
+	</body>
+</html>

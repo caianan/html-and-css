@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* 第一种方法利用margin计算来定位水平垂直居中 */
+      /* 第二种方法利用padding计算来定位水平垂直居中 */
+      /* 第三种方法,利用纯定位来实现,需要计算 */
+      /* 第四种方法使用定位+margin来实现,不用计算 */
+      /* .outer {
+        margin: 20px auto;
+        width: 500px;
+        height: 500px;
+        background-color: rgb(128, 146, 226);
+        position: relative;
+      }
+      .inner {
+        width: 200px;
+        height: 200px;
+        background-color: rgb(132, 214, 115);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -100px;
+        margin-left: -100px;
+      } */
+      /* 第四种方法:利用定位+margin,不用计算 */
+      /* .outer {
+        margin: 20px auto;
+        width: 500px;
+        height: 500px;
+        background-color: rgb(128, 146, 226);
+        position: relative;
+      }
+      .inner {
+        width: 200px;
+        height: 200px;
+        background-color: rgb(132, 214, 115);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+      } */
+      /* 第六种方法:使用vertical-align来解决 */
+      .outer {
+        margin: 20px auto;
+        width: 500px;
+        height: 500px;
+        background-color: rgb(128, 146, 226);
+        text-align: center;
+        line-height: 500px;
+      }
+      .inner {
+        width: 200px;
+        height: 200px;
+        background-color: rgb(132, 214, 115);
+        display: inline-block;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer">
+      <div class="inner"></div>
+    </div>
+  </body>
+</html>

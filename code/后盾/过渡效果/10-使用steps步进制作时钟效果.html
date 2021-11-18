@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			body{
+				width: 100vw;
+				height: 100vh;
+				background-color: #55AA7F;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			main{
+				height: 10rem;
+				width: 10rem;
+				background-color: #F0F8FF;
+				border-radius: 50%;
+				position: relative;
+			}
+			main::before{
+				content: '';
+				position: absolute;
+				width: .5rem;
+				height: .5rem;
+				background-color: black;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				border-radius: 50%;
+			}
+			main::after{
+				content: '';
+				position: absolute;
+				width: 2px;
+				height: 50px;
+				background-color: black;
+				left: 50%;
+				bottom: 50%;
+				transform:translate(-50%) ;
+				transform-origin: bottom;
+				transition-duration: 60s;
+				transition-timing-function: steps(60,start);
+			}
+			main:hover::after{
+				transform: translate(-50%) rotate(360deg);
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			
+		</main>
+	</body>
+</html>

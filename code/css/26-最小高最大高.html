@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			.box{
+				width:1230px ;
+				margin: 10px auto;
+				background-color: aquamarine !important;/* 添加这个important之后，就是在增加权重，不会被下面的 background-color: #6495ED; 覆盖掉*/
+				/* height: 1200px; */
+				/* overflow: hidden; */
+				min-height: 200px;/* 未来的高无限高，最小的高是500px */
+				max-height: 1200px; /* 最大高，超过这个高度就不显示了*/
+				overflow: hidden;/* 设置最大高之后，还要加上这个overflow:hidden;这样超过这个高度就会隐藏了 */
+				/* min-height 有兼容性问题，IE11可以兼容 ,但是IE6无法兼容*/
+				height: auto !important; /* important 是关键字过滤器，就是增加权重*/
+				height: 200px;
+				background-color: #6495ED;
+			}
+			.clear:after{
+				content: "";
+				display: block;
+				overflow: hidden;
+				height: 0;
+				clear: both;
+				visibility: hidden;
+			}
+			.clear{
+				zoom: 1;
+			}
+			.box img{
+				height: 300px;
+				width: 300px;
+				margin-right: 10px;
+				margin-bottom: 10px;
+				display: block;
+				float: left;
+			}
+			.box img:nth-child(4n){
+				margin-right: 0;
+			}
+			.box .div-clear{
+				clear: both;
+			}
+			.news{
+				height: 1200px;
+				background-color: #aa5500
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 
+			浮动带来的高度塌陷问题
+				问题产生：给子元素添加浮动之后，父元素没有高度的情况下，会出现高度塌陷（height：0）
+				问题解决：
+					1 给浮动元素的父元素添加height，不适合高度自适应的布局
+					2 overflow:hidden;  不适合有定位的情况; overflow:auto; 这种方法超出父级元素会出现滚动条
+					3 给浮动元素的下方添加一个空的块元素，并且给这个块元素添加cllear:both （注意是给浮动元素的下方添加一个空元素），会造成页面代码的冗余
+					4 万能清除法(现在的主流做法) ,给浮动元素的父元素添加clear类
+						.clear:after{content:"";display:block;height:0;clear:both;overflow:hidden;visibility:hidden;}
+						.clear{zoom:1;}
+					
+		 -->
+		<div class="box clear">
+			
+		</div>
+		<div class="news">
+			我是新闻区
+		</div>
+	</body>
+</html>

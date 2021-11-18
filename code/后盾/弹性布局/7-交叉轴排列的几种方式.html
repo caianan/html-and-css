@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			
+			article{
+				border: 5px solid #6495ED;
+				width:300px;
+				height: 300px;
+				/* height: 200px; */
+				margin: 10px auto;
+				display: flex;
+				flex-direction: row-reverse;
+				justify-content: space-around;
+				align-items: stretch;
+				/* 
+				align-items: flex-end; 从交叉轴的尾部开始排列
+				align-items: flex-start; 从交叉轴的头部开始排列
+				align-items: center; 在交叉轴的中间开始排列
+				align-items: stretch; 沿着交叉轴的方向拉伸,注意,如果元素的设置宽高的话,这个属性无效
+				*/
+				
+			}
+			article div{
+				/* height: 50px; */
+				width: 50px;
+				background-color: #AA5500;
+				margin: 5px;
+				line-height: 50px;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<article>
+			<div>one</div>
+			<div>two</div>
+			<div>three</div>
+		</article>
+	</body>
+</html>

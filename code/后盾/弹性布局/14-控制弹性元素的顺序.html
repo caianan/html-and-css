@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			article{
+				width: 600px;
+				height: 600px;
+				margin: 10px auto;
+				background-color: #F0F8FF;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+			article *{
+				width: 100%;
+				background-color: #6495ED;
+				flex-grow: 1;
+				font-size: 1.875rem;
+				box-sizing: border-box;
+				border: 10px solid #fff;
+				background-clip: content-box;
+			}
+			article div:nth-child(1){
+				order: 15;
+			}
+			article div:nth-child(2){
+				order: -1;
+			}
+			article div:nth-child(3){
+				order:-15
+			}
+			/* order的值越小,越排在前面 */
+		</style>
+	</head>
+	<body>
+		<article>
+			<div>one</div>
+			<div>two</div>
+			<div>three</div>
+		</article>
+	</body>
+</html>

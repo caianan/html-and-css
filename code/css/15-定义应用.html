@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .box {
+        width: 200px;
+        height: 300px;
+        margin: 50px auto;
+        background-color: #db5a6b;
+        position: relative;
+      }
+
+      .sbox {
+        width: 210px;
+        height: 20px;
+        position: absolute;
+        bottom: 110px;
+        background-color: #db5a6b;
+        /* display: none; */
+      }
+
+      .sbox:hover {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <img src="./img/111.jpg" alt="" />
+      <div class="sbox"></div>
+    </div>
+  </body>
+</html>

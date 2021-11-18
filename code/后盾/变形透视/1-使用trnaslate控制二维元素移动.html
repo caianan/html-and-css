@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			main{
+				width: 400px;
+				height: 400px;
+				background-color: #55AA7F;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+			}
+			div{
+				width: 200px;
+				height: 200px;
+				position: absolute;
+				margin-top: 100px;
+				margin-left: 100px;
+			}
+			main div:first-child{
+				background-color: #6495ED;
+			}
+			main div:last-child{
+				background-color: #aaaaff;
+				transition: 1s;
+			}
+			main:hover div:last-child{
+				transform: translate(200%);
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<div></div>
+			<div></div>
+		</main>
+	</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+				text-decoration: none;
+				list-style: none;
+			}
+			body{
+				position: relative;
+				width: 100vw;
+				height: 100vh;
+			}
+			nav{
+				position: absolute;
+				top: 50%;
+				left:50%;
+				transform: translate(-50%,-50%);
+			}
+			nav ul{
+				display: flex;
+				flex-direction: row;
+			}
+			nav ul li{
+				display: flex;
+				flex-direction: column;
+			}
+			nav ul li>a{
+				background-color: #55AA7F;
+				padding: 10px 20px;
+				margin-right: 1px;
+				text-transform: uppercase;
+				color: #fff;
+			}
+			
+			nav ul>li>div{
+				background-color: #EEEEEE;
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				height: 1.875rem;
+				transform: scale(0,0);
+				transition: .5s;
+				transform-origin: left top;
+				border-radius: 2px;
+			}
+			nav ul li>a:hover ~div{
+				transform: scale(1,1);
+			}
+			nav ul>li>div a{
+				cursor: pointer;
+				color: #222222;
+			}
+			nav ul>li>a+div{
+				margin-top: 1px;
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<li>
+					<a href="#">class</a>
+					<div><a href="">Java</a></div>
+					<div><a href="">PHP</a></div>
+				</li>
+				<li>
+					<a href="#">
+						show
+					</a>
+					<div><a href="">Mrs.Liao</a></div>
+				</li>
+			</ul>
+		</nav>
+	</body>
+</html>

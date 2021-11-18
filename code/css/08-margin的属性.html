@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .one {
+        width: 500px;
+        height: 500px;
+        background-color: blue;
+        overflow: hidden;
+        margin: 0 auto; /* 相对于body居中 */
+      }
+      .two {
+        width: 300px;
+        height: 300px;
+        background-color: red;
+        /* margin-left: 50px; */
+        /* margin-top: 80px; */ /* 这里会出现一个bug,子级设置外边距为80px,这时会出现子级拥有了80px的外边距,但是父级也同时移动了80px,解决这个问题的办法就是在父级设置一个属性 overflow:hidden */
+        /* margin-right: 50px; */
+        /* margin-right: 80px; */
+
+        /* 上面是各自设置margin的情况,也可以写在一起 */
+        /* margin: 80px 50px 80px 50px; */ /* 分别指的方向为上 右 下 左 */
+        /* margin: 80px 50px; */ /* 指上下的margin都为80px,左右的margin都为50px */
+        /* margin: 10px; */ /* 指上下左右的margin都为10px */
+
+        /* margin还可以设置居中,任何有实际宽度的大标签都可以使用margin设置水平居中 */
+        margin: 0 auto; /* 这样相对于two水平居中 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="one">
+      <div class="two"></div>
+    </div>
+  </body>
+</html>

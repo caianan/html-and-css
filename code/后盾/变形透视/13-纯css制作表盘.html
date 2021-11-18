@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			body{
+				background-color: #182C61;
+				width: 100vw;
+				height: 100vh;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			main{
+				width: 300px;
+				height: 300px;
+				background: linear-gradient(to right,#3B3B98,#FD7272,#9AECDB);
+				border-radius: 100%;
+				position: relative;
+			}
+			main::before{
+				content: '';
+				position: absolute;
+				width: 85%;
+				height: 85%;
+				top: 50%;
+				left: 50%;
+				background-color: #182C61;
+				transform: translate(-50%,-50%);
+				border-radius: 100%;
+			}
+			.liner{
+				position: absolute;
+				background-color: #182C61;
+				height: 70%;
+				width: 70%;
+				border-radius: 100%;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+			}
+			.liner div{
+				position: absolute;
+				width: 4px;
+				height: 100%;
+				background-color: #ffffff;
+				left: 50%;
+			}
+			.liner div:nth-of-type(){
+				transform:translateX(-50%) ;
+			}
+			.liner div:nth-of-type(2){
+				transform:translateX(-50%) rotate(30deg) ;
+			}
+			.liner div:nth-of-type(3){
+				transform:translateX(-50%) rotate(60deg) ;
+			}
+			.liner div:nth-of-type(4){
+				transform:translateX(-50%) rotate(90deg) ;
+			}
+			.liner div:nth-of-type(5){
+				transform:translateX(-50%) rotate(120deg) ;
+			}
+			.liner div:nth-of-type(6){
+				transform:translateX(-50%) rotate(150deg) ;
+			}
+			main .outer{
+				position: absolute;
+				width: 65%;
+				height: 65%;
+				background-color: #182C61;
+				border-radius: 100%;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+			}
+			main .time{
+				position: absolute;
+				width: 55%;
+				height: 55%;
+				background-color: #182C61;
+				border-radius: 100%;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+			}
+			main .time .pot{
+				position: absolute;
+				background-color: #F0F8FF;
+				width: 10px;
+				height: 10px;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				border-radius: 100%;
+			}
+			main .time .hour{
+				position: absolute;
+				background-color: #F0F8FF;
+				width: 4px;
+				height: 20%;
+				bottom: 50%;
+				left: 50%;
+				transform: translate(-50%) rotate(30deg);
+				transform-origin: bottom;
+				border-radius: 100%;
+				
+			}
+			main .time .min{
+				position: absolute;
+				background-color: #F0F8FF;
+				width: 2px;
+				height: 30%;
+				bottom: 50%;
+				left: 50%;
+				transform: translate(-50%) rotate(60deg);
+				transform-origin: bottom;
+				border-radius: 100%;
+				
+			}
+			main .time .second{
+				position: absolute;
+				background-color: #F0F8FF;
+				width: 1px;
+				height: 40%;
+				bottom: 50%;
+				left: 50%;
+				transform: translate(-50%) rotate(0deg);
+				transform-origin: bottom;
+				border-radius: 100%;
+				
+			}
+			main:hover .second{
+				transform: translate(-50%) rotate(360deg);
+				transition: 10s;
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<div class="liner">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="outer"></div>
+			<div class="time">
+				<div class="pot"></div>
+				<div class="hour"></div>
+				<div class="min"></div>
+				<div class="second"></div>
+			</div>
+		</main>
+	</body>
+</html>

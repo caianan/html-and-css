@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+			}
+			html{
+				font-size: 62.5%;
+			}
+			body{
+				/* background-color: #99CCFF; */
+				height: 100vh;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			table{
+				border: 1px solid #ebeef5 ;
+				/* 去掉单元格和单元格之间的间距 */
+				border-spacing: 0;
+				/* 合并单元格的边框,加上这个之后可以去掉单元格之间的间距 */
+				border-collapse: collapse;
+				color: #606266;
+				background-color: #fff;
+				/* 行宽度固定 */
+				table-layout: fixed;
+			}
+			
+			table tr th,td{
+				border:1px solid #ebeef5 ;
+				width: 18rem;
+				height: 5rem;
+				text-align: center;
+				font-size: 1.4rem;
+			}
+			table tr th:last-child{
+				width: 46rem;
+			}
+			table tr th{
+				color: #909399;
+			}
+			table tr:not(:first-child):hover{
+				background:rgba(0,0,0,.05);
+			}
+		</style>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<th>日期</th>
+				<th>姓名</th>
+				<th>地址</th>
+			</tr>
+			<tr>
+				<td>2016-05-02</td>
+				<td>王小虎</td>
+				<td>上海市普陀区金沙江路 1518 弄</td>
+			</tr>
+			<tr>
+				<td>2016-05-02</td>
+				<td>王小虎</td>
+				<td>上海市普陀区金沙江路 1518 弄</td>
+			</tr>
+			<tr>
+				<td>2016-05-02</td>
+				<td>王小虎</td>
+				<td>上海市普陀区金沙江路 1518 弄</td>
+			</tr>
+			<tr>
+				<td>2016-05-02</td>
+				<td>王小虎</td>
+				<td>上海市普陀区金沙江路 1518 弄</td>
+			</tr>	
+		</table>
+	</body>
+</html>

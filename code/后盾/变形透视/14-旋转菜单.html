@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="https://kit.fontawesome.com/9387a6a7e2.js" crossorigin="anonymous"></script>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			body{
+				background-color: #3B3B98;
+				width: 100vw;
+				height: 100vh;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			nav{
+				width: 200px;
+				height: 200px;
+				position: relative;
+			}
+			nav::before{
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 120px;
+				height: 120px;
+				background-color: #F8EFBA;
+				/* z-index: 1; */
+				transform: translate(-50%,-50%);
+				border-radius: 100%;
+			}
+			nav:hover ul{
+				transform: scale(1);
+			}
+			ul{
+				width: 200px;
+				height: 200px;
+				/* background-color: #FD7272; */
+				position: relative;
+				transform: scale(0);
+				transition: 0.4s;
+			}
+			
+			
+			li{
+				list-style: none;
+				height: 50px;
+				width: 50px;
+				background-color:#F8EFBA ;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 100%;
+				position: absolute;
+				transition: 1s;
+				transform-origin: 100px 100px;
+				transform: scale(1);
+			}
+			
+			ul:hover li:nth-of-type(2){
+				transform: rotate(40deg);
+			}
+			ul:hover li:nth-of-type(2) span{
+				transform: rotate(320deg);
+			}
+			ul:hover li:nth-of-type(3){
+				transform: rotate(80deg);
+			}
+			ul:hover li:nth-of-type(4){
+				transform: rotate(120deg);
+			}
+			ul:hover li:nth-of-type(5){
+				transform: rotate(160deg);
+			}
+			ul:hover li:nth-of-type(6){
+				transform: rotate(200deg);
+			}
+			ul:hover li:nth-of-type(7){
+				transform: rotate(240deg);
+			}
+			ul:hover li:nth-of-type(8){
+				transform: rotate(280deg);
+			}
+			ul:hover li:nth-of-type(9){
+				transform: rotate(320deg);
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<li><span><i class="fas fa-camera"></i></span></li>
+				<li><span><i class="fa fa-address-card" aria-hidden="true"></i></span></li>
+				<li><span><i class="fa fa-user-o" aria-hidden="true"></i></span></li>
+				<li><span><i class="fa fa-cog" aria-hidden="true"></i></span></li>
+				<li><span><i class="fa fa-bar-chart" aria-hidden="true"></i></span></li>
+				<li><span><i class="fa fa-bell" aria-hidden="true"></i></span></li>
+				<li><span><i class="fa fa-commenting" aria-hidden="true"></i></span></li>
+				<li><span><i class="fa fa-credit-card-alt" aria-hidden="true"></i></span></li>
+				<li><span><i class="fa fa-heartbeat" aria-hidden="true"></i></span></li>
+			</ul>
+		</nav>
+	</body>
+</html>
