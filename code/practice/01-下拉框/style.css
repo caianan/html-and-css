@@ -41,8 +41,8 @@ body {
 }
 .nav-bar ul li:hover .son-of-nav {
     position: absolute;
-    display: flex;
-    flex-direction: column;
+    display: block;
+    /* flex-direction: column; */
     margin-left: -15px;
     margin-top: 15px;
     background-color: rgba(149, 198, 233, 0.9);
@@ -61,10 +61,12 @@ body {
     display: none;
 }
 .hover-me:hover .sub-of-nav {
-    /* display: block; */
+    display: block;
     position: absolute;
-    display: flex;
-    flex-direction: column;
-    margin-left: 160px;
+    /* display: flex; */
+    /* flex-direction: column; */
+    margin-left: 120px;
     margin-top: -40px;
+    background-color: rgba(149, 198, 233, 0.9);
+    border-radius: 4px;
 }
