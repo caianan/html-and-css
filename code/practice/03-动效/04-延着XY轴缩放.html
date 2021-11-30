@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            article {
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            main {
+                border: 5px solid rgb(105, 103, 103);
+                width: 400px;
+                height: 400px;
+                position: relative;
+            }
+            main div {
+                width: 200px;
+                height: 200px;
+                background-color: rgb(225, 238, 207);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            main div:last-child {
+                background-color: rgb(207, 209, 238);
+                transition: 1s;
+            }
+            main:hover div:last-child {
+                transform: translate(-50%, -50%) scale(0, 0);
+            }
+        </style>
+    </head>
+    <body>
+        <article>
+            <main>
+                <div></div>
+                <div></div>
+            </main>
+        </article>
+    </body>
+</html>

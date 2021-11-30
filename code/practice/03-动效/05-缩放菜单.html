@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                text-decoration: none;
+                color: #ddd;
+            }
+            nav {
+                width: 100vw;
+                height: 100vh;
+            }
+            .navbar {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: flex;
+            }
+            .navbar li {
+                padding: 10px;
+                width: 100px;
+                height: 50px;
+                background: rgb(152, 152, 216);
+                margin-right: 5px;
+                margin-bottom: 1px;
+                display: flex;
+                position: relative;
+                border-radius: 4px;
+            }
+            .navbar li a {
+                flex: 1;
+                text-align: center;
+                line-height: 50px;
+            }
+            .sub-nav {
+                position: absolute;
+                top: 71px;
+                left: 0px;
+                transform: scale(0);
+                transform-origin: left top;
+                transition: 1s;
+            }
+            .navbar li:hover .sub-nav {
+                transform: scale(1);
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <ul class="navbar">
+                <li>
+                    <a href="#">Home</a>
+                    <ul class="sub-nav">
+                        <li><a href="#">Our Co.</a></li>
+                        <li><a href="#">Play Us</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Contact Us</a>
+                    <ul class="sub-nav">
+                        <li><a href="#">Phone</a></li>
+                        <li><a href="#">E-mail</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </body>
+</html>

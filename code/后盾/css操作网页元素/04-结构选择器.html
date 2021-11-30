@@ -1,42 +1,43 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta name="viewport"
-			content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<meta charset="utf-8">
-		<title></title>
-		<style type="text/css">
-			/* 后代选择器 */
-			/* article h2{
+    <head>
+        <meta
+            name="viewport"
+            content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+        />
+        <meta charset="utf-8" />
+        <title></title>
+        <style type="text/css">
+            /* 后代选择器 */
+            /* article h2{
 				background-color: #008000;
 			} */
-			/* 子代选择器 */
-			/* article>h2 {
+            /* 子代选择器 */
+            /* article>h2 {
 				background-color: #008000;
 			} */
-			/* 后续兄弟选择器 */
-			/* article h1 ~ h2{
+            /* 后续兄弟选择器 */
+            article h1 ~ h2 {
+                background-color: #008000;
+            }
+
+            /* 相邻兄弟选择器 */
+            /* article h1 + h2{
 				background-color: #008000;
 			} */
-			
-			/* 相邻兄弟选择器 */
-			article h1 + h2{
-				background-color: #008000;
-			}
-			
-		</style>
-	</head>
-	<body>
-		<main>
-			<article>
-				<h2>www.baidu.com</h2>
-				<h1>Baidu.com</h1>
-				<h2>www.baidu.com</h2>
-				<aside>
-					<h2>www.baidu.com</h2>
-				</aside>
-				<h2>www.baidu.com</h2>
-			</article>
-		</main>
-	</body>
+        </style>
+    </head>
+    <body>
+        <main>
+            <article>
+                <h2>www.baidu.com</h2>
+                <h1>Baidu.com</h1>
+                <h2>www.baidu.com</h2>
+                <aside>
+                    <h2>www.baidu.com</h2>
+                </aside>
+                <h2>www.baidu.com</h2>
+            </article>
+        </main>
+    </body>
 </html>

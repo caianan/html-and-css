@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+                text-decoration: none;
+            }
+            body::after {
+                content: 'Welcome Everyone';
+                position: fixed;
+                z-index: 1;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: pink;
+            }
+            article {
+                display: flex;
+                flex-direction: column;
+                width: 100vw;
+                height: 100vh;
+            }
+            article main {
+                flex: 1;
+                position: relative;
+            }
+            article main div {
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transform: translateY(-200%);
+                transition: 2s;
+                z-index: 2;
+                background-color: #f9f7f7;
+            }
+            main > div:target {
+                transform: translateY(0);
+            }
+            article main div img {
+                width: 150px;
+                height: 150px;
+            }
+            article footer {
+                flex: 0 0 8vh;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                background-color: rgb(243, 215, 220);
+            }
+            article footer div {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+            }
+            article footer div a {
+                display: block;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                color: rgb(143, 139, 139);
+                line-height: 8vh;
+            }
+        </style>
+    </head>
+    <body>
+        <article>
+            <main>
+                <div id="home"><img src="../img/maintenance.png" alt="" /></div>
+                <div id="team"><img src="../img/team-work.png" alt="" /></div>
+                <div id="contact-us"><img src="../img/mobile-app.png" alt="" /></div>
+            </main>
+            <footer>
+                <div><a href="#home">Home</a></div>
+                <div><a href="#team">Team</a></div>
+                <div><a href="#contact-us">Contact Us</a></div>
+            </footer>
+        </article>
+    </body>
+</html>
