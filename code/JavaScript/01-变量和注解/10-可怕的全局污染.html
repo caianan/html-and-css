@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // 'use strict'
+            function show() {
+                web = 'baidu'
+            }
+            show()
+            console.log(web)
+            /* 在函数体中是没有web这个变量,这样函数中的局部变量就会变成全局变量,将全局变量污染 */
+            /* 要是引用var let const就不会出现这种情况 */
+            /* 要是还是怕忘掉的话,可以引入严格模式.'use strict' */
+        </script>
+    </body>
+</html>

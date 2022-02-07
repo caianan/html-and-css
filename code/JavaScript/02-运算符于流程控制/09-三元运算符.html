@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // let res = false ? 2 : 5
+            // console.log(res)
+            // 三元表达式的小例子
+            function div(options = {}) {
+                let div = document.createElement('div')
+                div.style.width = options.width ? options.width : '200px'
+                div.style.height = options.height ? options.height : '100px'
+                div.style.backgroundColor = options.backgroundColor ? options.backgroundColor : 'red'
+                document.body.appendChild(div)
+            }
+            let obj = { width: '100px', height: '100px' }
+            div(obj)
+        </script>
+    </body>
+</html>

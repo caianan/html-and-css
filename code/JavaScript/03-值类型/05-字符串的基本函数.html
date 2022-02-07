@@ -1,10 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 </head>
 <body>
-$END$
+<input type="text" name="text" id="">
+<span></span>
+<br>
+<script>
+    let str = '  baiDu.com';
+    // 获取字符串长度
+    console.log(str.length)
+    // 字符串变成大写
+    console.log(str.toUpperCase())
+    // 字符串变成小写
+    console.log(str.toLowerCase())
+    // 去除字符串的空格
+    console.log(str.trim())
+    // 字符串去掉空格的应用
+    let input = document.querySelector('[name="text"]')
+    input.addEventListener('keyup', function () {
+        this.value = this.value.trim();
+        console.log(this.value.length)
+        let error = '';
+        let span = document.querySelector('span')
+        if (this.value.length < 5) {
+            error = '字符长度不能小于5'
+        }
+        span.innerHTML = error
+    })
+
+    let string = 'phelomena'
+    for (let i = 0; i < string.length; i++) {
+        let span = document.createElement('span')
+        span.innerHTML = string[i]
+        span.style.fontSize = (i + 1) * 10 + 'px'
+        document.body.append(span)
+    }
+</script>
 </body>
 </html>

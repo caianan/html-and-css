@@ -1,10 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 </head>
 <body>
-$END$
+<script>
+    const boolean = new Boolean(true);
+    console.log(typeof boolean) //object
+    console.log(boolean.valueOf()) //true
+    const flat = true
+    console.log(typeof flat) //boolean
+    let number = 99
+    if (number) {
+        console.log('hello world') //hello world
+    }
+    // 数值类型和布尔类型在进行比较的时候,会将布尔类型转化为数值类型进行比较
+    // false会自动转化为0,true会自动转化为1
+    console.log(0 == false) //true
+    console.log(1 == true) //true
+    console.log(99 == true) //false
+    // 在表达式运算的时候,0会自动转换为false,除了0之外会自动转换为true
+    if (99) console.log('hello world')
+    if (0) console.log('hello world')
+    console.log('================');
+    if (-1) console.log('HELLO WORLD')
+
+    // 字符串和数值进行比较,会都转换为数值类型,再进行比较
+    console.log('================');
+    console.log('11' == 11) // 字符串会先转换为数值类型,再和11进行比较
+    console.log('11' == true) // 字符串会先转化数字类型,'11'转化为数值类型为11;true也会转化为数值类型,true转化为数值类型后为1,所以11 和1是不想等的为false
+    console.log('0' == false)
+    /*字符串'0'转化为数值类型后为0, false转化为数值类型后为0 . 0==0,结果就是true*/
+    console.log('**********')
+    console.log(Number('')) // ''空字符串转化为数值类型后为0
+    console.log('' == true)
+
+    // 但是字符串再参与运算的时候,只要不是空字符串,都会自动转化为true,空字符串会转化为false
+    if ('12') console.log('new year')
+    if ('') console.log('happy new year')
+
+    // 数组在进行比较的时候,也是会先转化为数字,然后在进行比较
+    console.log('%%%%%%%%%%%%%%%%%%%%%%%%%%%%');
+    console.log(Number([])) // 在比较的时候会转化为0
+    console.log(Number([1])) // 在比较的时候会转化为1
+    console.log(Number(['1'])) // 在比较的时候会转化为1
+    console.log(Number({})) //在比较的时候会转化为NaN
+    // 但是在参与运算的时候,空的数组和空的字符串会转化为true
+    if ([]) console.log('hello Jack') //hello Jack
+    if ({}) console.log('hello Mary') //hello Mary
+</script>
 </body>
 </html>

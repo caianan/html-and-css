@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            const NAME = 'Jackson'
+            // NAME = 'document' 基本类型不能更改
+            const OBJ = {}
+            OBJ.name = 'Jackson'
+            // 引用类型可以更改
+            const AGE = 15
+            function show() {
+                const AGE = 16
+                console.log(AGE)
+            }
+            show()
+            console.log(AGE)
+            /* 在块作用域中可以更改 */
+        </script>
+    </body>
+</html>

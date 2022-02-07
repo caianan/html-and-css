@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <input type="text" name="" id="" />
+        <span id="msg"></span>
+        <script>
+            let a = 1
+            // let b = 2 false
+            let b = '1' //true
+            console.log(a == b)
+            let c = true
+            let d = 1
+            let e = 8
+            let f = -1
+            console.log(c == d) //true
+            console.log(c == e) //false
+            console.log(c == f) //false;
+            let l = '1'
+            let n = '39'
+            let m = true
+            console.log(l == m) //true
+            console.log(n == m) //false
+            let span = document.querySelector('#msg')
+            console.log(span)
+            document.querySelector('input[type="text"]').addEventListener('keyup', function () {
+                span.innerHTML = this.value >= 90 ? 'not 90' : ''
+            })
+            /* 
+                在比较运算符中
+                    string类型如果是 '234'这种纯数字类型,会自动转型为数字类型,这样再和数字进行比较
+                    boolean类型,如果是true会自动转化为1,再和数字进行比较;如果是false会自动转化为0再和数字进行比较
+            
+            */
+        </script>
+    </body>
+</html>

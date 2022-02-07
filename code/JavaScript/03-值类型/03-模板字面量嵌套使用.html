@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+</head>
+<body>
+<script>
+    // 模板字面量可以嵌入变量
+    let name = 'Jackson'
+    console.log(`我的名字是${name}`)
+
+    // 模板字面量可以嵌入函数
+    function age() {
+        return 18
+    }
+
+    console.log(`我今年已经${age()}了`)
+    // 模板字面量可以嵌套
+    let lesson = [{name: 'CSS'}, {name: 'PHP'}, {name: 'Javascript'}]
+    // 第一种方法
+    /* function template() {
+        let str = ''
+        for (let index = 0; index < lesson.length; index++) {
+            const element = lesson[index]
+            str += `
+                <li>${element.name}</li>
+            `
+        }
+        return `<ul>` + str + `</ul>`
+    }
+    document.body.innerHTML = template() */
+    // 第二种方法
+    function template() {
+        // return `<ul>${lesson.map(item => "<li>" + item.name + "</li>").join('')}</ul>`
+        // 字面量的嵌套
+        return `<ul>${lesson.map(item => `<li>${item.name}</li>`).join('')}</ul>`
+    }
+
+
+    document.body.innerHTML = template()
+
+</script>
+</body>
+</html>

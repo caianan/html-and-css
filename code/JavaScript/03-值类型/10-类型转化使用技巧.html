@@ -1,10 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 </head>
 <body>
-$END$
+<script>
+    // number 转换为字符串,分为隐式转换和显示转换
+    // 隐式转换
+    let numOne = 123
+    let stringOne = numOne + ''
+    console.log(stringOne instanceof String) //false
+    console.log(typeof stringOne) //string
+    // 显式转换
+    let stringTwo = String(numOne);
+    console.log(stringTwo instanceof String); //false
+    console.log(typeof stringTwo) //string
+
+    // string 转化为number类型,也分为隐式转换和显示转换
+    // 隐式转换
+    let stringThree = '123'
+    let numThree = stringThree * 1
+    console.log(numThree instanceof Number);//false
+    console.log(typeof numThree)//Number
+    // 显式转换
+    let numberFour = Number(stringThree);
+    console.log(numberFour instanceof Number);//false
+    console.log(typeof numberFour)//Number
+    console.log('=====================');
+    console.log(Number('123fj')) //NaN
+    console.log('123dfd' * 1)//NaN
+    // parseInt parseFloat
+    console.log(parseInt('123fjio')) //123
+    console.log(parseInt('fs123'))//NaN
+    console.log(parseFloat('23dfd')) //23
+    console.log(parseFloat('1.232dsfk'))//1.232
+
+    // 构造函数
+    const stringFive = 'Jack';
+    const stringSix = new String('Tom')
+    console.log(stringFive.toString()) //Jack
+    console.log(typeof stringFive) //string
+    console.log(stringSix.toString()) //Tom
+    console.log(typeof stringSix) //object
+    // stringFive调用toString()的时候,会将自动转换为String对象,所以可以使用toString方法
+    // 同样的，arr和num类型也可以直接调用toString方法
+    let arr = ['hello', 'world'];
+    console.log(arr.toString()) //hello,world
+    let score = 123
+    console.log(score.toString())
+
+    // 字符串和数组的互相转换
+    let arrOne = [1, 2, 3, 4, 5, 6];
+    console.log(arrOne.join('')) //123456
+    console.log(arrOne.join('|')) //1|2|3|4|5|6
+    let str = 'hello';
+    console.log(str.split('')) //['h', 'e', 'l', 'l', 'o']
+    console.log(str.split(' ')) //['hello']
+
+</script>
 </body>
 </html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let name = 'Jackson'
+            switch (name) {
+                case 'Alyssan':
+                    console.log('your grilfirend')
+                    break
+                case 'Jackson':
+                    console.log('your boyfriend')
+                    break
+                default:
+                    console.log('This is a humen')
+                    break
+            }
+            // switch 穿刺
+            // 在运行的时候,notice和case后的notice匹配上了,但是这里没有break,程序就会继续向下执行
+            // 直到遇到了第一个break才结束
+            // 如果将第一个break去掉的话会一直向下执行,知道default才结束,所有case之后的语句都会执行
+            let error = 'notice'
+            switch (error) {
+                case 'notice':
+                case 'warning':
+                    console.log('提示或者警告')
+                    break
+                case 'error':
+                default:
+                    console.log('这是一个错误')
+                    break
+            }
+            // case 后面也可以跟表达式
+            function message(age) {
+                let msg = ''
+                switch (true) {
+                    case age > 60:
+                        msg = '老年人'
+                        break
+                    case age > 40:
+                        msg = '中年人'
+                        break
+                    case age > 18:
+                        msg = '青年人'
+                        break
+                    default:
+                        msg = '未成年人'
+                        break
+                }
+                return msg
+            }
+            console.log(message(32))
+        </script>
+    </body>
+</html>

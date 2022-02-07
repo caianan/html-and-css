@@ -1,10 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 </head>
 <body>
-$END$
+<script>
+    console.log('*'.repeat(3))
+
+    function phone(mobile, len = 3, repeatNum = 4) {
+        // return String(mobile).slice(0, (len * -1)) + '*'.repeat(len)
+        let sum = len + repeatNum
+        return String(mobile).slice(0, (-1 * sum)) + '*'.repeat(repeatNum) + String(mobile).substr((len * -1), len)
+    }
+
+    console.log(phone(15029987389))
+</script>
 </body>
 </html>

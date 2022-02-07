@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let a = 1
+            a++
+            console.log(a)
+            ++a
+            console.log(a)
+            let f = 2
+            let n = 1
+            // let m = f + ++n   =====> let m = f + (n = n +1)
+            let m = f + n++ // ========> let m = (f + n) + 1
+            console.log(m)
+        </script>
+    </body>
+</html>

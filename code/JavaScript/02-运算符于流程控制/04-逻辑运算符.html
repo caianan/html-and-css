@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <input type="text" name="password" />
+        <input type="text" name="confirm_password" />
+        <br />
+        <span id="msg"></span>
+        <script>
+            // 先获取所有的表单
+            let inputs = document.querySelectorAll("input[name='password'],input[name='confirm_password']")
+            console.log(inputs)
+            // 函数:根据name获取dom对象
+            function query(name) {
+                return document.querySelector(`input[name="${name}"]`)
+            }
+            // 给每个表单对象上添加监听事件
+            inputs.forEach(function (item) {
+                let msg = ''
+                item.addEventListener('keyup', function () {
+                    if (
+                        query('password').value !== query('confirm_password').value ||
+                        query('password').value.length < 6
+                    ) {
+                        msg = 'This is not same'
+                    }
+                    document.querySelector('#msg').innerHTML = msg
+                })
+            })
+        </script>
+    </body>
+</html>

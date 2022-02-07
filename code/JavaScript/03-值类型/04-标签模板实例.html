@@ -1,10 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+
+        ul li a {
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-$END$
+<script>
+    /*let name = '百度';
+    let web = 'www.baidu.con';
+    console.log(tag`搜索引擎${name},在线网址${web}`)*/
+
+    /*function tag(strings, name, web) {
+        console.log(name);
+        console.log(web)
+        console.log(strings) //['搜索引擎', ',在线网址', '']
+    }*/
+    /*function tag(strings, ...vars) {
+        console.log(vars)//['百度', 'www.baidu.con']
+        console.log(strings) //['搜索引擎', ',在线网址', '']
+    }*/
+
+    // 实例
+    lesson = [
+        {title: 'English', teacher: 'Jack'},
+        {title: 'Math', teacher: 'Jack'},
+        {title: 'Computer', teacher: 'Jack'}
+    ]
+
+    // 创建字面量模板
+    function template() {
+        return `
+            <ul>${lesson.map(item => links`<li>作者:${item.teacher},课程:${item.title}</li>`).join('')}</ul>
+        `
+    }
+
+    function links(strings, ...vars) {
+        console.log(strings)
+        return strings.map((str, key) => {
+            // return str + vars[key]
+            // 因为vars的key比strings的key少一个,所以要进行一个三元运算符的判断
+            return str + (vars[key] ? vars[key].replace(
+                'Jack', `<a href="https://www.github.com">Jack</a>`
+            ) : '')
+        }).join('')
+    }
+
+    document.body.innerHTML = template()
+</script>
 </body>
 </html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            outer: for (let i = 1; i < 10; i++) {
+                inner: for (let j = 1; j <= 10; j++) {
+                    console.log(i, j)
+                    if (i + j > 10) {
+                        break outer
+                        // 加上outer标签之后,外层循环也会跳出了
+                        // 不会不加上outer标签的话,只是遇到i+j> 10的时候只是将内层inner的循环跳出,但是外层outer的循环没有跳出
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

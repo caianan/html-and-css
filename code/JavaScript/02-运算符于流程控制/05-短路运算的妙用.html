@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let a = 1
+            let b = 0
+            if (a || b) {
+                console.log('phelo')
+            }
+            // 赋值,会将为真的那个结果赋值给f
+            let f = b || a
+            console.log(f)
+            let m = ''
+            let arr = []
+            let obj = {}
+            let n = 0
+            // 0 null undefined '' NaN 以上会在if判断中自动转化为false
+            // [] {} 除了0之外的数字,非空字符串,在if判断中会自动转化为true
+            if (!NaN) {
+                console.log('空字符串在判断时为false')
+            }
+            // 短路运算在赋值运算中的应用
+            let msg = prompt('请输入') || 'secret'
+            console.log(msg)
+        </script>
+    </body>
+</html>
