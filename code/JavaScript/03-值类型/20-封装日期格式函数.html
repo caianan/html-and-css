@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // 创建一个时间对象
+            const date = new Date()
+            console.log(date.getFullYear())
+
+            // 封装日期格式函数
+            function dateFormat(date, format = 'YYYY-MM-DD hh:mm:ss') {
+                let config = {
+                    YYYY: date.getFullYear(),
+                    MM: date.getMonth() + 1,
+                    DD: date.getDate(),
+                    hh: date.getHours(),
+                    mm: date.getMinutes(),
+                    ss: date.getSeconds(),
+                }
+                for (const key in config) {
+                    format = format.replace(key, config[key])
+                }
+                return format
+            }
+            console.log(dateFormat(date))
+            console.log(dateFormat(date, 'YYYY-MM-DD'))
+        </script>
+    </body>
+</html>

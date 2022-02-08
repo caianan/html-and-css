@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let number = new Number(99)
+            console.log(number) //是一个Number对象
+            console.log(typeof number)
+            console.log(number.valueOf())
+            let numberTwo = 11
+            console.log(numberTwo) // 是数值类型
+            console.log(typeof numberTwo)
+            console.log(numberTwo.toString()) // 数值类型转字符串
+            // 在使用 . 语法的时候,会自动转换为对象,调用对象的方法,比如上面numberTwo是数值类型,但是还是可以使用.语法
+            console.log(numberTwo.valueOf()) // 数值类型转换为原始类型
+            let num = 95.666
+            // 判断是否是整数
+            console.log(Number.isInteger(num)) //false
+            // 取小数点后几位
+            console.log(num.toFixed(2)) // 95.66
+        </script>
+    </body>
+</html>

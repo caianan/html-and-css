@@ -1,25 +1,27 @@
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-<script>
-    let num = 100
-    console.log(!!num)
-    console.log(Boolean(num))
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let num = 100
+            console.log(!!num) //true
+            console.log(Boolean(num)) //true
 
-    let string = ''
-    console.log(!!string);
-    console.log(Boolean(string))
+            let string = ''
+            console.log(!!string) //false
+            console.log(Boolean(string)) //false
 
-    let arr = []
-    let obj = {}
-    console.log(!!arr);
-    console.log(Boolean(obj))
-</script>
-</body>
+            let arr = []
+            let obj = {}
+            console.log(!!arr) //true
+            console.log(Boolean(obj)) //true
+        </script>
+    </body>
 </html>

@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<script>
-    let str = 'www.google.com';
-    // console.log(str.slice(3)); //.google.com
-    // console.log(str.substring(3)) //.google.com
-    // console.log(str.substr(3)) //.google.com
+    <head>
+        <meta charset="UTF-8" />
+        <title>Title</title>
+    </head>
+    <body>
+        <script>
+            let str = 'www.google.com'
+            // console.log(str.slice(3)); //.google.com
+            // console.log(str.substring(3)) //.google.com
+            // console.log(str.substr(3)) //.google.com
 
-    // console.log(str.slice(4, 7)) // [startIndex,endIndex)
-    // console.log(str.substring(4, 7)) //[startIndex,endIndex)
-    // console.log(str.substr(4, 7)) //[startIndex,length)
+            console.log(str.slice(4, 7)) // [startIndex,endIndex)
+            console.log(str.substring(4, 7)) //[startIndex,endIndex)
+            console.log(str.substr(4, 7)) //[startIndex,length)
 
-    console.log(str.slice(-3, -1)) // co
-    console.log(str.substring(-1, -5)) //空 相当于(0)
-    console.log(str.substring(-1)) //www.google.com 截取全部字符串
-    console.log(str.substr(-2, 3)) // om
-
-
-</script>
-</body>
+            console.log(str.slice(-3, -1)) // co
+            console.log(str.substring(-1, -5)) //空 相当于(0)
+            console.log(str.substring(-1)) //www.google.com 截取全部字符串
+            console.log(str.substr(-2, 3)) // om
+        </script>
+    </body>
 </html>

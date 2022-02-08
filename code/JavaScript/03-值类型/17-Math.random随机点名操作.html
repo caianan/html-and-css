@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // [0,1)之间的一个随机小数
+            console.log(Math.random()) //0.957430735641096
+            // 0-5之间的随机数
+            // Math.floor(Math.random() * (Max+1))
+            console.log(Math.floor(Math.random() * 6)) //5
+            // 2-5之间的随机数
+            // 公式:Math.floor(Math.random() * (Max-Min+1))+Min
+            // 如果取得数不包含最大数,则不+1 公式:Math.floor(Math.random() * (Max-Min))+Min
+            console.log(Math.floor(Math.random() * (3 + 1)) + 2)
+            // 随机点名
+            const students = ['Jack', 'Tom', 'Wang', 'Lee', 'Han']
+            console.log(students[Math.floor(Math.random() * (students.length - 1 + 1)) + 0])
+            // 也可以写成
+            console.log(students[Math.floor(Math.random() * students.length)])
+            // 如果从索引为2开始取随机数,一直到数组结尾
+            console.log(students[Math.floor(Math.random() * (students.length - 2)) + 2])
+            // 将随机取值封装在一个函数中
+            function arrayRandomValue(array, start = 1, end) {
+                end = end ? end : array.length
+                start--
+                // 如果传入函数的值不是数组那种从0开始,而是从1开始计算的个数,那么这个就不需要再加1了
+                return array[Math.floor(Math.random() * (end - start)) + start]
+            }
+        </script>
+    </body>
+</html>

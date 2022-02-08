@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // 创建时间对象
+            // 第一种方法
+            const date = new Date()
+            console.log(date)
+            console.log(typeof date) //object
+            console.log(date * 1) //1644302358860 是1970年1月1日到现在的毫秒数
+
+            // 第二种方法
+            const hd = Date()
+            console.log(hd)
+            console.log(typeof hd) //string
+            console.log(hd * 1) //NaN
+
+            const time = Date.now()
+            console.log(time) //1644302546660 时间戳
+
+            // 获取时间
+            // 创建一个时间对象
+            const date1 = new Date('1989-8-24 04:12:46')
+            console.log(date1) //Thu Aug 24 1989 04:12:46 GMT+0900 (中国夏令时间)
+            console.log(date1.getFullYear()) //1989
+            console.log(date1.getMonth()) //7 月份比较特殊,从0开始
+            console.log(date1.getDate()) //24
+            console.log(date1.getDay()) //4
+            console.log(date1.getHours()) //4
+            console.log(date1.getMinutes()) //12
+            console.log(date1.getSeconds()) //46
+            // 也可以以参数的形式传入
+            const date2 = new Date(1989, 7, 24, 4, 12, 46)
+            console.log(date2)
+            console.log(date2.getMonth()) //7
+            // 也可以是数组传入,如果数组传入的话,需要将数组展开
+            const date3 = new Date(...[1989, 7, 24, 4, 12, 46])
+            console.log(date3)
+        </script>
+    </body>
+</html>

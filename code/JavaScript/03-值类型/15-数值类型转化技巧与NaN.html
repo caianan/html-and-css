@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // NaN无法进行比较
+            console.log(NaN == NaN) // false
+            // 所以在判断NaN的时候,可以使用Number的isNaN方法或者Object的is方法
+            console.log(Number.isNaN('baidu' / 123)) // true
+            console.log(Object.is('baidu' / 123, NaN)) // true
+            // 字符串类型转换成浮点类型
+            let string = '9.256world'
+            console.log(parseFloat(string))
+            // boolean类型转化为数字类型
+            let flag = false
+            console.log(Number(flag)) //0
+            // 数字类型转化为boolean类型
+            console.log(Boolean(1)) // true
+            console.log(Boolean(0)) // false
+            // 字符串转化为boolean类型
+            console.log(Boolean('')) // false
+            console.log(Boolean('hello')) // true
+            // 数组转化为Number类型
+            console.log(Number([1, 2, 3])) // NaN
+            console.log(Number([])) // 0
+            console.log(Number([1])) // 1
+            console.log(Number(['1'])) // 1
+            // 对象转化为Number类型
+            console.log(Number({})) // NaN
+            console.log(Number({ a: 1 })) // NaN
+        </script>
+    </body>
+</html>
