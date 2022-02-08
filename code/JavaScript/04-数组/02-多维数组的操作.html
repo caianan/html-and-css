@@ -8,7 +8,11 @@
     </head>
     <body>
         <script>
-            // 数组是
+            // 数组是对象,所以只要数组的地址不发生改变,所以可以使用const来声明数组变量,是可以修改数组的
+            const array = [12, 23, 34, 45, 56]
+            // 下面这种情况内存地址是没有发生改变的,只是把内存地址中的值变了
+            array[2] = 100
+            console.log(array)
         </script>
     </body>
 </html>

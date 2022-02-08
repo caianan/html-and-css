@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .hide {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div>baidu.com</div>
+        <div>google.com</div>
+        <script>
+            // 获取div的dom节点
+            const divs = document.querySelectorAll('div')
+            console.log(divs.length)
+
+            // 遍历divs
+            // for (const item of divs) {
+            //     // 给item添加一个点击事件
+            //     item.addEventListener('click', function () {
+            //         this.classList.toggle('hide')
+            //     })
+            // }
+            // 将获取的divs转换成数组,再使用map方法遍历
+            /* Array.from(divs).map((item) => {
+                console.log(item)
+            }) */
+            // 使用原型链的方式给所有div添加点击事件
+            /* Array.prototype.map.call(divs, (item) => {
+                console.log(item)
+            }) */
+            // 还可以使用...展开语法,将divs转换成数组,再使用map方法遍历,一直在报错,不知道什么原因
+        </script>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div>baidu.com</div>
+        <div>google.com</div>
+        <script>
+            // 判断是否是数组类型
+            console.log(Array.isArray([1, 2, 3])) // true
+            // 判断是否是数组类型
+            console.log(Array.isArray(new Array(1, 2, 3))) // true
+            // 判断是否是数组类型
+            console.log(Array.isArray({})) // false
+            // 数组转换为字符串的三种方法
+            // 1.join()
+            console.log([1, 2, 3].join()) // 1,2,3
+            console.log([1, 2, 3].join('')) // 123
+            console.log([1, 2, 3].join('-')) // 1-2-3
+            // 2.toString()
+            console.log([1, 2, 3].toString()) // 1,2,3
+            // 3.String() 构造函数
+            console.log(String([1, 2, 3])) // 1,2,3
+            // 字符串转换数组的两种方法
+            // 1.split()
+            console.log('baidu'.split('')) // ["b", "a", "i", "d", "u"]
+            console.log('baidu'.split('a')) // ['b','idu']
+            // 2.form()
+            console.log(Array.from('baidu')) // ["b", "a", "i", "d", "u"]
+            // 凡事有length属性的都可以使用form()方法转换为数组
+            // 比如有length属性的字符串,数组,对象等
+            const obj = {
+                name: 'Jack',
+                age: 20,
+                length: 3,
+            }
+            //console.log(Array.from(obj)) // [] 得到的是一个空数组,因为obj没有length属性
+            //这样就可以得到一个数组
+            console.log(
+                Array.from(obj, (value, key) => {
+                    return key + ':' + value
+                })
+            ) // ["name:Jack", "age:20", "length:3"]
+            console.log(Array.from(obj).length) // 3
+            console.log()
+            // Array.from()可以将dom节点转化为数组
+            const divs = document.querySelectorAll('div')
+            console.log(Array.from(divs)) // [div, div]
+            // 改变dom节点的背景颜色
+            const arr = Array.from(divs, (div) => {
+                div.style.backgroundColor = 'red'
+                return div
+            })
+            console.log(arr) // [div, div]
+        </script>
+    </body>
+</html>

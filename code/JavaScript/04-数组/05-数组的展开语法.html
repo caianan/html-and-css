@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            const array = ['jack', 'tom', 'rose']
+            const array2 = ['tina', 'jim']
+            // 使用push方法合并数组
+            for (const value of array) {
+                array2.push(value)
+            }
+            console.log(array2) // console: ['tina', 'jim', 'jack', 'tom', 'rose']
+            // 使用...展开语法合并数组
+            const arr = [...array, ...array2]
+            console.log(arr)
+            // 使用...展开语法可以接收任意多个参数
+            function show(...args) {
+                // 返回所有传入参数的总和
+                return args.reduce((pre, cur) => pre + cur)
+            }
+            console.log(show(1, 2, 3, 4, 5)) //15
+            // 如果要传入数组,可以使用...展开语法,这样就可以将数组转换成参数传入函数
+            console.log(show(...[1, 2, 3])) //6
+        </script>
+    </body>
+</html>
