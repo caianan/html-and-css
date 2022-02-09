@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // 使用find进行查找,找到之后将值返回
+            let arr = [1, 2, 3, 4, 5, 6]
+            let res = arr.find(function (item) {
+                return item
+            })
+            console.log(res) //1
+            let res2 = arr.find(function (item) {
+                // 就近原则,找到了就将值返回
+                return true
+            })
+            console.log(res2) //1
+
+            let res3 = arr.find(function (item) {
+                console.log(item)
+            })
+            console.log(res3) // 1 2 3 4 5 6 undefined
+            let res4 = arr.find(function (item) {
+                return item > 3
+            })
+            // 将符合>3的第一个值返回,就近原则
+            console.log(res4) // 4
+            // 如果没有符合条件的值,返回undefined
+            let res5 = arr.find(function (item) {
+                return item > 10
+            })
+            console.log(res5) //undefined
+            // 如果一个数组中是引用类型,那么使用includes()方法是无法找到想要的那个值
+            let arr2 = [
+                {
+                    name: '张三',
+                },
+                {
+                    name: '李四',
+                },
+                {
+                    name: '王五',
+                },
+            ]
+            // 使用includes()方法,这是应为引用类型存储的是地址,所以在arr2.includes({name: '张三'})中传入的是一个新对象,肯定和arr2中的对象不同,所以返回false
+            let res6 = arr2.includes({
+                name: '张三',
+            })
+            console.log(res6) //false
+            // 这个时候使用find()方法,就可以找到想要的那个值
+            let res7 = arr2.find(function (item) {
+                return item.name === '王五'
+            })
+            console.log(res7) //{ name: '王五' }
+            // 还可以使用findIndex()方法,这个返回的是找到的那个值的下标
+            let res8 = arr2.findIndex(function (item) {
+                return item.name === '王五'
+            })
+            console.log(res8) //2
+        </script>
+    </body>
+</html>
