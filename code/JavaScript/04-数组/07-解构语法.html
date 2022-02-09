@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // 数组的解构赋值
+            let arr = ['jack', 13]
+            // 传统的赋值
+            let name = arr[0]
+            let year = arr[1]
+            console.log(name, year) //jack 13
+            // 解构赋值 一种简单的写法
+            let [name1, year1] = arr
+            console.log(name1, year1) //jack 13
+            // 字符串可以使用解构语法
+            console.log('google')
+            const [...args] = 'baidu'
+            console.table(args)
+            // 字符串转化为数组
+            console.log(Array.from('baidu'))
+            // 字符串转化为数组,并且去除空格
+            console.log(Array.from('baidu', (item) => item.trim()))
+            // 解构赋值就是将右侧的数组赋值给左侧的变量,如果左侧的变量少于右侧的值,那么就需要使用...变量名来表示剩下的值
+            let [firstone, others] = ['jack', 'jeulian', 'tina', 'shane']
+            console.log(firstone, others) //jack jeulian
+            let [first, ...everyone] = ['jack', 'jeulian', 'tina', 'shane']
+            console.log(first, everyone) //jack [jeulian, tina, shane]
+            // 解构赋值的默认值
+            let [country, city = 'xianyang'] = ['china']
+            console.log(country, city) //china xianyang
+            // 解构赋值在函数中的应用
+            function getInfo([name, age]) {
+                console.log(name, age)
+            }
+            getInfo(['jack', 13])
+        </script>
+    </body>
+</html>

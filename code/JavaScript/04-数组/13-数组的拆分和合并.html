@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // 字符串拆分为数组的方法:split和from
+            const str = 'hello-world'
+            const arr = str.split('-')
+            console.log(arr) //['hello', 'world']
+            const arr2 = str.split()
+            console.log(arr2) //['hello-world']
+            const arr3 = str.split('')
+            console.log(arr3) //[('h', 'e', 'l', 'l', 'o', '-', 'w', 'o', 'r', 'l', 'd')]
+            // 将数组合并成字符串的方法join
+            let str2 = arr3.join('')
+            console.log(str2) //hello-world
+            // 合并两个数组可以使用concat的方法
+            let arr4 = ['a', 'b', 'c']
+            let arr5 = ['d', 'e', 'f']
+            let arr6 = [12, 23, 34, 45, 56]
+            let arr7 = arr4.concat(arr5, arr6)
+            console.log(arr7) // ['a', 'b', 'c', 'd', 'e', 'f', 12, 23, 34, 45, 56]
+            // 合并两个数组也可以使用展开语法
+            let arr8 = [...arr4, ...arr5, ...arr6]
+            console.log(arr8) //['a', 'b', 'c', 'd', 'e', 'f', 12, 23, 34, 45, 56]
+            // 复制数组 copyWithin()
+            let arr9 = [1, 2, 3, 4, 5]
+            let arr10 = arr9.copyWithin(1, 2, arr9.length + 1) //参数分别表示复制的目标位置,复制的起始位置,复制的结束位置(包括起始位置,但是不包括结束位置)
+            console.log(arr10) //[1, 3, 3, 4, 5]
+            console.log(arr9)
+            // fill() copyWithin() splice() 方法都可以改变原数组
+            // fill() copyWithin() 一个是将目标参数进行填充,一个是将目标位置进行复制
+        </script>
+    </body>
+</html>

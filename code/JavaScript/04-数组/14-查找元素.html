@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let str = 'hello'
+            console.log(str.indexOf('e')) //1 目标字符所在的索引值
+            console.log(str.indexOf('e', 2)) //-1 第二个参数是起始查找的位置,找不到返回-1
+
+            // 同样在数组中也可以使用indexOf方法
+            let arr = [1, 2, 3, 4, '5']
+            console.log(arr.indexOf(3)) //2
+            console.log(arr.indexOf(3, 2)) //2 第二个参数是其实查找位置
+            // 还有lastIndexOf方法,表示从右开始查找
+            console.log(arr.lastIndexOf(3)) //2
+            console.log(arr.lastIndexOf(5)) //-1 数组中没有5,只有'5',所以返回-1
+
+            // 字符串中includes() 找到这个元素返回true,没有找到这个元素返回false
+            console.log('hello'.includes('e')) //true
+            console.log('hello'.includes('e', 2)) //false
+
+            // 数组中includes() 找到这个元素返回true,没有找到这个元素返回false
+            console.log(arr.includes(5)) //false
+            console.log(arr.includes('5', 2)) //true
+        </script>
+    </body>
+</html>

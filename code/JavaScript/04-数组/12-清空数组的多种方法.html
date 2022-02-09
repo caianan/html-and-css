@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // 清空数组的多种方法
+            let arr = [12, 23, 34, 45, 56]
+            // 第一种方法
+            /* arr = []
+            console.log(arr) */
+            // 第二种方法
+            /* arr.length = 0
+            console.log(arr) */
+            // 第三种方法
+            /* arr.splice(0, arr.length)
+            console.log(arr) */
+            // 第四种方法
+            // arr.pop() 返回值是删除的元素,如果全部删除完了,返回的是undefined
+            const array = []
+            console.log(array.pop()) //undefined
+            while (arr.pop()) {}
+            console.log(arr)
+        </script>
+    </body>
+</html>

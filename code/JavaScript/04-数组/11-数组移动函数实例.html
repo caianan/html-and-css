@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // 测试splice()方法
+            const array = [1, 2, 3, 4, 5]
+            const newArray = array.splice(3, 1)
+            console.log(array)
+            array.splice(array.length + 2, 0, ...newArray)
+            console.log(array)
+            // 数组移动函数
+            function move(array, from, to) {
+                // 为了程序的健壮性,要求from和to必须是数字
+                if (from < 0 || to < 0 || from >= array.length || to >= array.length) {
+                    console.error('参数不合法')
+                    return
+                }
+                const moveArray = [...array]
+                // 删除from位置的元素
+                const element = array.splice(from, 1)[0]
+                // 在to位置插入元素
+                array.splice(to, 0, element)
+                return array
+            }
+            const array2 = [1, 2, 3, 4, 5]
+            console.log(move(array2, 2, 0))
+        </script>
+    </body>
+</html>

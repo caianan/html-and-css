@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            const array = ['baidu', 'google', 'firefox', 'opera']
+            // 在数组的后面添加元素,push()方法可以添加多个参数
+            let arrs = array.push('edge')
+            console.log(arrs) // 5 返回的元素是新添加这个元素后,数组的长度
+            // 在数组的前面添加元素,unshift()方法可以添加多个参数
+            let arrs2 = array.unshift('360')
+            console.log(arrs2) // 6 返回的元素是新添加这个元素后,数组的长度
+            console.log(array) //['360', 'baidu', 'google', 'firefox', 'opera', 'edge']
+            // 删除数组后面的元素
+            let arrs3 = array.pop()
+            console.log(arrs3) // edge 返回的是删除的元素
+            // 删除数组前面的元素
+            let arrs4 = array.shift()
+            console.log(arrs4) // 360 返回的是删除的元素
+            console.log(array) //[('baidu', 'google', 'firefox', 'opera')]
+            // 给指定位置填充元素
+            let arrs5 = array.fill('xiaomi', 1, 3) // 填充的元素,起始位置,结束位置,是将原来的位置覆盖,不是添加
+            console.log(arrs5) //  ['baidu', 'xiaomi', 'xiaomi', 'opera']
+            console.log(array) //  ['baidu', 'xiaomi', 'xiaomi', 'opera']
+        </script>
+    </body>
+</html>

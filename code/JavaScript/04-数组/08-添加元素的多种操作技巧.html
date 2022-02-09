@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // 使用length属性,在数组中添加元素
+            let array = [12, 23, 34, 45, 56]
+            console.log(array.length)
+            array[5] = 99
+            console.log(array)
+            array[6] = 66
+            console.log(array)
+            array[array.length] = 78
+            console.log(array)
+            // 也可以使用push()方法,添加元素,推荐这种方法
+            array.push(199)
+            console.log(array)
+            // 使用unshift()方法,在数组的开头添加元素
+            array.unshift(100)
+            console.log(array)
+            console.log(array.toString())
+            console.log(array.join(''))
+            // push()方法可以传入多个参数
+            array.push(200, 300, 400)
+            console.log(array)
+            // 可以使用push()方法,合并两个数组
+            array.push(...[500, 600, 700])
+            console.log(array)
+        </script>
+    </body>
+</html>
