@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let lesson = [
+                { tittle: 'javascript', catecory: 'js' },
+                { tittle: 'css', catecory: 'css' },
+                { tittle: 'html', catecory: 'html' },
+            ]
+            // for 循环
+            for (let i = 0; i < lesson.length; i++) {
+                lesson[i].tittle = `自学${lesson[i].tittle}`
+            }
+            console.log(lesson)
+            let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+            // for 循环
+            for (let index = 0; index < arr.length; index++) {
+                arr[index] = arr[index] * 2
+            }
+            console.table(arr)
+            // forof 循环
+            for (let item of lesson) {
+                item.tittle = `${item.tittle}every day`
+            }
+            console.table(lesson)
+            // forof 循环 引用类型可以改变,但是值类型不能改变
+            // 因为引用类型的值是指向同一个地址的,所以改变了值,也会改变原来的值.但是值类型的值是不能改变的
+            for (let value of arr) {
+                value = value * 10
+            }
+            console.table(arr)
+            // forin 循环
+            for (let key in lesson) {
+                lesson[key].tittle = `${lesson[key].tittle} hhh`
+            }
+            console.table(lesson)
+            // forin 循环是可以改变值类型的
+            for (let value in arr) {
+                arr[value] = arr[value] * 10
+            }
+            console.table(arr)
+        </script>
+    </body>
+</html>

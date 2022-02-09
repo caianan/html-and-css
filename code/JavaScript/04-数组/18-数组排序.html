@@ -6,5 +6,31 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
     </head>
-    <body></body>
+    <body>
+        <script>
+            // 数组排序
+            let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+            let res = arr.sort(function (a, b) {
+                // a-b是负数,a在前,b在后,排列后是从小到大
+                return a - b
+            })
+            console.log(arr) //  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+            console.log(res) // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+            // 反转排序
+            let res2 = arr.sort(function (a, b) {
+                return b - a
+            })
+            console.log(res2) // [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+            // 数组中是对象也可以进行排序
+            let cart = [
+                { name: 'apple', price: 10 },
+                { name: 'banana', price: 20 },
+                { name: 'orange', price: 30 },
+            ]
+            let res3 = cart.sort(function (a, b) {
+                return b.price - a.price
+            })
+            console.log(res3) // [{ name: 'orange', price: 30 }, { name: 'banana', price: 20 }, { name: 'apple', price: 10 }]
+        </script>
+    </body>
 </html>
