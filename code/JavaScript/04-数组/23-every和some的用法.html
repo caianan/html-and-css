@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <input type="text" name="title" id="" />
+        <span></span>
+        <script>
+            // every() 方法用于检测数组中的所有元素是否都通过了指定函数的测试。
+            // 如果有一个元素不符合条件，则返回 false，否则返回 true。
+            let arr = ['google', 'firefox']
+            let res = arr.every(function (item, index, arr) {
+                console.log(item) //google firefox
+                return false //返回false，终止循环,只打印第一个值google;如果返回的是true，则继续循环
+            })
+            console.log(res) //false
+            // 学生成绩数组
+            let scores = [
+                { name: 'jack', score: 80 },
+                { name: 'tom', score: 50 },
+                { name: 'mary', score: 90 },
+            ]
+            let res2 = scores.every(function (value) {
+                return value.score >= 60
+            })
+            console.log(res2 ? '通过' : '不通过') //不通过
+            // some() 方法用于检测数组中的元素是否至少有一个通过了指定函数的测试。
+            // 如果有一个元素通过了测试，则返回 true，否则返回 false。
+            let arr3 = ['google', 'firefox']
+            let res3 = arr3.some(function (value) {
+                console.log(value) //google firefox some()方法如果有一个元素通过了测试，则返回 true，否则返回 false。返回了true，终止循环,返回了false，继续循环
+                return false
+            })
+            console.log(res3) //true
+            // some()方法的实例
+            let keywords = ['java', 'javascript', 'php', 'html']
+            // 获取input这个dom元素的值
+            let title = document.querySelector("[name='title']")
+            // 判断input的值是否在keywords中,不用所有的值都存在,只要一个值存在就可以了
+            // 给title添加一个点击事件
+            title.addEventListener('keyup', function () {
+                let res = keywords.some((item) => {
+                    return this.value.includes(item)
+                })
+                if (res === false) {
+                    document.querySelector('span').innerHTML = `必须包含${keywords.join('或')}其中一个`
+                } else {
+                    document.querySelector('span').innerHTML = ''
+                }
+            })
+        </script>
+    </body>
+</html>
