@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let arr = ['jack', 'tom']
+            let keys = arr.keys() // 返回一个迭代器对象
+            console.log(keys) // keys 是一个可迭代对象,可以使用next()方法进行取值,如下面注释的内容,每次取值是一个对象,包含两个属性:value和done. value表示数组的索引,done表示是否迭代完毕
+            let values = arr.values() // 返回一个迭代器对象
+            console.log(values) // values 是一个可迭代对象,可以使用next()方法进行取值,如下面注释的内容,每次取值是一个对象,包含两个属性:value和done. value表示数组索引上对应的值,done表示是否迭代完毕
+            //console.log(keys.next()) // { value: 0, done: false }
+            //console.log(keys.next()) // { value: 1, done: false }
+            //console.log(keys.next()) // {value: undefined, done: true}
+            // 可以使用展开语法进行读取
+            /* let { value, done } = keys.next()
+            console.log(value, done) // 0 false */
+            //console.log(values.next()) //{value: 'jack', done: false}
+            // 使用展开语法进行读取values
+            /* let { value, done } = values.next()
+            console.log(value, done) // tom false */
+            // 可以使用while循环，来遍历数组的值
+            /* while (({ value, done } = values.next()) && done === false) {
+                console.log(value) // jack tom
+            } */
+            // for of循环是使用迭代的方法来取值的
+            /* for (const value of values) {
+                console.log(value) //jack tom
+            } */
+            /* for (const key of keys) {
+                console.log(key) // 0 1
+            } */
+            let entries = arr.entries() // 返回一个迭代器对象
+            console.log(entries) // entries 是一个可迭代对象,可以使用next()方法进行取值
+            //console.log(entries.next()) // {value: [0, 'jack'], done: false}
+            //console.log(entries.next()) // {value:[1, 'tom'], done: false}
+            // 从上面的例子我们可以知道，entries是一个可迭代对象，可以使用next()方法进行取值,如下面注释的内容,每次取值是一个对象,包含两个属性:value和done. value是个数组,表示索引 和索引对应的值,done表示是否迭代完毕
+            // 可以使用解构语法来进行读取
+            // let { value, done } = entries.next()
+            //console.log(value, done) // [0, 'jack'] false
+            // value 返回的是个数组,还可以使用数组的解构语法
+            /* let {
+                done,
+                value: [a, b],
+            } = entries.next()
+            console.log(a, b)  */ //0,jack
+            // 因为entries是可迭代对象,所以可以使用for of循环来遍历
+            for (const [key, value] of entries) {
+                // console.log(iterator) // [0, 'jack'] [1, 'tom']
+                console.log(key)
+                console.log(value)
+            }
+        </script>
+    </body>
+</html>
