@@ -48,7 +48,7 @@
                 value: [a, b],
             } = entries.next()
             console.log(a, b)  */ //0,jack
-            // 因为entries是可迭代对象,所以可以使用for of循环来遍历
+            // 因为entries是可迭代对象,所以可以使用for of循环来遍历,for of循环的是value值
             for (const [key, value] of entries) {
                 // console.log(iterator) // [0, 'jack'] [1, 'tom']
                 console.log(key)
