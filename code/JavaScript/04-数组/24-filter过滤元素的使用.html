@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let arr = ['google', 'firefox']
+            let res = arr.filter(function (item, index, arr) {
+                //return true //['google', 'firefox']
+                return false //[]
+            })
+            console.log(res)
+            let lessons = [
+                { title: '媒体查询响应式布局', category: 'html' },
+                { title: 'flex布局', category: 'html' },
+                { title: '数组', category: 'javascript' },
+            ]
+            let newArray = lessons.filter(function (lesson) {
+                return lesson.category === 'html'
+            })
+            console.log(lessons) //
+            console.log(newArray) //[{title: '媒体查询响应式布局', category: 'html'},{title: 'flex布局', category: 'html'}]
+            // filter 是不改变原数组的
+        </script>
+    </body>
+</html>
