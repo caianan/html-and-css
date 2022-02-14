@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let cart = [
+                { name: 'iphone', price: 4999 },
+                { name: 'imac', price: 8999 },
+                { name: 'ipad', price: 5999 },
+            ]
+            // 查看购物车最贵的商品
+            /* function mostExpensiveProductions(productions) {
+                let max = 0
+                let maxIndex = 0
+                for (let i = 0; i < productions.length; i++) {
+                    if (productions[i].price > max) {
+                        max = productions[i].price
+                        maxIndex = i
+                    }
+                }
+                return productions[maxIndex]
+            } */
+            function mostExpensiveProductions(productions) {
+                return productions.reduce(function (prev, curr) {
+                    return prev.price > curr.price ? prev : curr
+                })
+            }
+            console.log(mostExpensiveProductions(cart))
+            // 统计购物车所有商品的价格总和
+            function totalProductions(cart) {
+                return cart.reduce(function (pre, value) {
+                    return (pre += value['price'])
+                }, 0)
+            }
+            console.log(totalProductions(cart)) //19997
+        </script>
+    </body>
+</html>

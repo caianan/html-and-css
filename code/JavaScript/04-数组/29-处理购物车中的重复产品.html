@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let cart = [
+                { name: 'iphone', price: 4999 },
+                { name: 'imac', price: 8999 },
+                { name: 'ipad', price: 5999 },
+                { name: 'iphone', price: 4999 },
+                { name: 'iphone', price: 4999 },
+                { name: 'ipad', price: 5999 },
+            ]
+            // 去除购物车中重复的商品
+            function unique(cart) {
+                let res = []
+                for (let i = 0; i < cart.length; i++) {
+                    let flag = true
+                    for (let j = 0; j < res.length; j++) {
+                        if (cart[i].name === res[j].name) {
+                            flag = false
+                            break
+                        }
+                    }
+                    if (flag) {
+                        res.push(cart[i])
+                    }
+                }
+                return res
+            }
+        </script>
+    </body>
+</html>

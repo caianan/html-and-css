@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let arr = [1, 5, 6, 78, 9, 8, 654, 465456, 8]
+            arr.reduce(function (pre, value, index, arr) {
+                // pre是上一次迭代的结果，value是当前迭代的值，index是当前迭代的索引，arr是当前迭代的数组
+                // pre其实就是上次的返回值,如果是第一次,pre就是第一个值;第一次之后,pre就是上次的返回值
+                console.log(pre, value)
+                return 99
+            }, 0)
+            // 0 是第一次,pre的返回值
+            // 使用reduce可以统计一个元素在函数中出现的次数
+            function arrayCount(array, targetItem) {
+                return array.reduce(function (total, value) {
+                    // total是上一次迭代的结果，value是当前迭代的值
+                    // 所以可以通过这种特性来计算一个元素在数组中出现的次数
+                    total += targetItem == value ? 1 : 0
+                    return total
+                }, 0)
+            }
+            console.log(arrayCount(arr, 8)) //2
+            // 使用reduce可以计算数组中的最大值
+            function arrayMax(array) {
+                return array.reduce(function (pre, value) {
+                    return pre > value ? pre : value
+                })
+            }
+            console.log(arrayMax(arr))
+        </script>
+    </body>
+</html>

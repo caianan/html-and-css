@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let lessons = [
+                { title: '媒体查询响应式布局', category: 'html' },
+                { title: 'flex布局', category: 'html' },
+                { title: '数组', category: 'javascript' },
+            ]
+            let arr = ['google', 'edge']
+            let arrNew = arr.map(function (value, index, arr) {
+                value = `${value}-map`
+                return value
+            })
+            console.log(arr) //['google', 'edge']
+            console.log(arrNew) //['google-map', 'edge-map']
+
+            // map是数组的映射,不会改变原数组,map返回什么,新数组就接收到什么
+            // map是复制了一份原数组,改变了复制的数组,返回的是新数组
+            // 如果是数组是值类型的话，改变了复制的数组，原数组的值是不会发生改变的
+            // 但是如果数组是引用类型的话，复制的是地址，改变了复制的数组，原数组也会发生改变的
+            // 如果是对象的话，复制的是地址，改变了复制的数组，原数组也会发生改变的
+            // 这个和forEach是不同的，forEach不是复制了一份数组，而是对原数组进行迭代，所以可以改变引用类型数据，不能改变值类型数组
+            // 比如下面的例子
+            let newLessons = lessons.map(function (value) {
+                //value.click = 100  这样原数组已经发生改变了，为了不引起原数组改变，且可以获得新数组，可以使用一下的方法
+                //return Object.assign({ click: 100 }, value)
+                //或者直接返回一个新对象
+                return {
+                    title: value.title,
+                    category: value.category,
+                    click: 100,
+                }
+            })
+            console.table(newLessons)
+            console.table(lessons)
+        </script>
+    </body>
+</html>
