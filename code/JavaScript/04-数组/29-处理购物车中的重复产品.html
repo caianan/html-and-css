@@ -17,11 +17,11 @@
                 { name: 'ipad', price: 5999 },
             ]
             // 去除购物车中重复的商品
-            function unique(cart) {
+            /* function unique(cart) {
                 let res = []
                 for (let i = 0; i < cart.length; i++) {
                     let flag = true
-                    for (let j = 0; j < res.length; j++) {
+                    for (let j = i + 1; j < res.length + 1; j++) {
                         if (cart[i].name === res[j].name) {
                             flag = false
                             break
@@ -32,7 +32,31 @@
                     }
                 }
                 return res
+            } */
+            // 使用fillter + includes来实现
+            /* function unique(cart) {
+                let res = []
+                return cart.filter(function (item, index, arr) {
+                    return res.includes(item.name) ? false : res.push(item.name)
+                })
             }
+            console.log(unique(cart)) */
+            // 使用reduce + includes来实现
+
+            /* function unique(cart) {
+                let res = []
+                return cart.reduce(function (pre, value) {
+                    console.log(pre)
+                    // console.log(value)
+
+                    return res.includes(value.name) ? pre : res.push(value)
+                })
+            }
+            unique(cart) */
+            let res = cart.reduce(function (pre, value) {
+                return pre.name.includes('iphone') ? pre : value
+            })
+            console.log(res)
         </script>
     </body>
 </html>
