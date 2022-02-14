@@ -54,7 +54,7 @@
             }
             unique(cart) */
             let res = cart.reduce(function (pre, value) {
-                return pre.name.includes('iphone') ? pre : value
+                return pre.includes('iphone') ? pre : value
             })
             console.log(res)
         </script>
