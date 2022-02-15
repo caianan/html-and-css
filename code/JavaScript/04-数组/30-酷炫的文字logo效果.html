@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #6495ed;
+                font-size: 100px;
+                font-weight: bold;
+                color: rgb(235, 230, 230);
+                text-transform: uppercase;
+            }
+            .color {
+                animation-name: color;
+                animation-duration: 1s;
+                animation-iteration-count: 4;
+                animation-timing-function: linear;
+                animation-direction: alternate;
+            }
+            div > span {
+                display: inline-block;
+            }
+            @keyframes color {
+                50% {
+                    color: rgb(240, 240, 173);
+                    transform: scale(2);
+                }
+                80% {
+                    color: rgb(173, 240, 173);
+                    transform: scale(0.5);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div>houdunren.com</div>
+        <script>
+            const div = document.querySelector('div')
+            let arr = [...div.textContent]
+            arr.reduce(function (pre, value, index) {
+                // 如果pre和index相等,将这个div清空
+                if (pre === index) {
+                    div.innerHTML = ''
+                }
+                // 创建一个span节点
+                let span = document.createElement('span')
+                span.innerHTML = value
+                // 将这个span的节点追加到div中
+                div.appendChild(span)
+                // 给span追加一个事件
+                span.addEventListener('mouseover', function () {
+                    this.classList.add('color')
+                })
+                // 添加一个animated的监听事件
+                span.addEventListener('animationend', function () {
+                    this.classList.remove('color')
+                })
+            }, 0)
+        </script>
+    </body>
+</html>
