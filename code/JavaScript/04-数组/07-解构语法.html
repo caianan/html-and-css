@@ -23,14 +23,18 @@
             console.table(args)
             // 字符串转化为数组
             console.log(Array.from('baidu'))
-            // 字符串转化为数组,并且去除空格
-            console.log(Array.from('baidu', (item) => item.trim()))
+            // 使用from()原字符串不会改变
             // 解构赋值就是将右侧的数组赋值给左侧的变量,如果左侧的变量少于右侧的值,那么就需要使用...变量名来表示剩下的值
             let [firstone, others] = ['jack', 'jeulian', 'tina', 'shane']
             console.log(firstone, others) //jack jeulian
             let [first, ...everyone] = ['jack', 'jeulian', 'tina', 'shane']
             console.log(first, everyone) //jack [jeulian, tina, shane]
-            // 解构赋值的默认值
+            // 解构赋值的默认值，默认值不能放在第一位，否则会出现undefined
+            /* 
+            let [country = 'china', city] = ['xian']
+            console.log(country); //xian
+                console.log(city) //undefined
+            */
             let [country, city = 'xianyang'] = ['china']
             console.log(country, city) //china xianyang
             // 解构赋值在函数中的应用
